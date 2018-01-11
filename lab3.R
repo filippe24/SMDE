@@ -30,27 +30,29 @@ st <- as.vector(service_time)
 
 Obtained_mean <- mean(st)
 Obtained_var <- var(st)
-#Obtained_median <- median(st)
+Obtained_median <- median(st)
 Obtained_cv <- sqrt(var(st))/mean(st)
 
+sprintf("Mean from theory = %s", Theor_mean)
+sprintf("Mean from experiment = %s", Obtained_mean)
 
-sprintf(" Mean")
-sprintf("From theory = %s", Theor_mean)
-sprintf("From experiment = %s", Obtained_mean)
-#sprintf("From experiment = %s", Obtained_median)
+sprintf("Variance from theory = %s", Theor_var)
+sprintf("Vatiance from experiment = %s", Obtained_var)
 
-sprintf(" Variance")
-sprintf("From theory = %s", Theor_var)
-sprintf("From experiment = %s", Obtained_var)
-
-sprintf(" Coeficent of variation")
-sprintf("From theory = %s", Theor_cv)
-sprintf("From experiment = %s", Obtained_cv)
+sprintf("CV from theory = %s", Theor_cv)
+sprintf("CV from experiment = %s", Obtained_cv)
 
 
+sprintf("Median from experiment = %s", Obtained_median)
 
 hist(st)
 
 
+#-----------------------excersise 2
+
+theta <- traffic_factors
+startTime <- Sys.time()
+x11()
+par(mfrow=c(2,2))
 
   
